@@ -1,33 +1,9 @@
-/* .hero {
-    display: flex;
-    padding: 50px;
-    justify-content: space-between;
-  }
-  
-  .left h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-  }
-  
-  .start-btn {
-    padding: 15px 25px;
-    background: green;
-    border: none;
-    border-radius: 12px;
-    color: white;
-    cursor: pointer;
-  }
-   */
-
-
-   /* Full container */
 .home-container {
   width: 100%;
   background: #f9fafb;
   padding: 0;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -54,7 +30,6 @@
   font-size: 17px;
 }
 
-/* Hero section */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -91,7 +66,6 @@
   cursor: pointer;
 }
 
-/* Hero image */
 .hero-right img {
   width: 420px;
 }

@@ -1,31 +1,47 @@
-import React from 'react';
-// export default function Footer(){
-//   return (
-//     <footer style={{background:'#0f172a',color:'white',padding:'28px 0',marginTop:40}}>
-//       <div className="container" style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-//         <div>
-//           <strong>IdeaHub</strong>
-//           <div style={{color:'var(--muted)',marginTop:8}}>Share, learn and build together</div>
-//         </div>
-//         <div style={{color:'var(--muted)'}}>© {new Date().getFullYear()} IdeaHub</div>
-//       </div>
-//     </footer>
-//   );
-// }
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-      <footer className="footer">
+      <footer className="footer"
+      style={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        width: "100%",
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "20px 40px",
+        background: "#0f172a",
+        color: "white"}}>
         <div className="footer-left">
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
         </div>
   
         <div className="footer-right">
-          <i className="fab fa-facebook"></i>
-          <i className="fab fa-twitter"></i>
+        <a 
+          href="https://github.com/Laxmiyadav122"   
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-github"></i>
+          </a>
+
+          <a 
+          href="https://www.linkedin.com/in/laxmi-yadav-4154b0300/"   
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+      <i class="fa-brands fa-linkedin-in"></i>     
+     </a>
+          <a 
+          href="https://www.facebook.com/"   
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-facebook"></i>
+          </a>
         </div>
       </footer>
     );

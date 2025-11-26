@@ -1,65 +1,26 @@
-// import React from 'react'
-// import "./Navbar.css"
-
-// function Navbar() {
-//   return (
-//     <div className='nav'>
-//       <nav className='navbar'>
-//       <h1 className='logo'>IdeaShare</h1>
-//         <ul className='nav-links'>
-//           <li><a href="#home" >Home</a></li>
-//           <li><a href="#about" >Explore</a></li>
-//           <li><a href="#skills">add Idea</a></li>
-//           <li><a href="#projects" >Login/Signup</a></li>
-//         </ul>
-//       </nav>
-//     </div>
-//   )
-// }
-
-// export default Navbar
-
-
-
-// import React from 'react';
-// import { Link } from "react-router-dom";
-// import "./Navbar.css";
-
-// function Navbar() {
-//   return (
-//     <div className='nav'>
-//       <nav className='navbar'>
-//         <h1 className='logo'>IdeaShare</h1>
-
-//         <ul className='nav-links'>
-//           <li><Link to="/">Home</Link></li>
-//           <li><Link to="/dashboard">Explore</Link></li>
-//           <li><Link to="/add">Add Idea</Link></li>
-//           <li><Link to="/login">Login/Signup</Link></li>
-//         </ul>
-//       </nav>
-//     </div>
-//   );
-// }
-
-// export default Navbar;
-
-
-
-
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const onAddClick = () => navigate("/add");
+
   return (
     <nav className="navbar">
-      <div className="logo">IdeaShare</div>
+      <div className="nav-left">
+        <Link to="/" className="logo">IdeaShare</Link>
+      </div>
+
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/explore">Explore</Link></li>
-        <li><Link to="/add">Add Idea</Link></li>
-        <li><Link to="/login">Login / Signup</Link></li>
+        <li><NavLink to="/" end>Home</NavLink></li>
+        <li><NavLink to="/explore">Explore</NavLink></li>
+        <li><NavLink to="/dashboard">Dashboard</NavLink></li>
       </ul>
+
+      <div className="nav-right">
+        <button className="btn btn-green" onClick={onAddClick}>Add Idea</button>
+        <NavLink to="/login" className="btn btn-outline">Login</NavLink>
+      </div>
     </nav>
   );
 }

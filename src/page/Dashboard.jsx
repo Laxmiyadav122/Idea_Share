@@ -36,6 +36,7 @@ export default function Dashboard({ ideas = [], onDelete, onLike, onComment, use
           ))}
         </ul>
       </aside>
+
     </div>
   );
 }

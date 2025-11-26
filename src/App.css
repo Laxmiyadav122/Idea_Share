@@ -1,4 +1,4 @@
-/* #root {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,17 +39,15 @@
 
 .read-the-docs {
   color: #888;
-} */
+} 
 
 
-/* Make full layout vertical */
 .app-layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Allow main content to push footer down */
 .content {
   flex: 1;
 }

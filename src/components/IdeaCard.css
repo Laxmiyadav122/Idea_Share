@@ -1,0 +1,12 @@
+.idea-card{background:white;border-radius:12px;padding:18px;box-shadow:var(--card-shadow);margin-bottom:16px}
+.idea-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.idea-actions{display:flex;gap:8px;align-items:center}
+.idea-actions button{background:#eef2ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:8px;cursor:pointer}
+.small-btn{background:#fff;border-radius:8px;padding:6px 10px;border:1px solid #eaeaea;text-decoration:none}
+.small-btn.danger{border-color:#fecaca;color:#b91c1c}
+.muted.small{color:var(--muted);font-size:12px}
+.comments{margin-top:8px}
+.comment{font-size:14px;padding:6px 0;border-top:1px dashed #f1f5f9}
+.comment-form{display:flex;gap:8px;margin-top:12px}
+.comment-form input{flex:1;padding:8px;border-radius:8px;border:1px solid #e5e7eb}
+.comment-form button{background:var(--navy);color:white;padding:8px 12px;border-radius:8px;border:none}

@@ -15,23 +15,7 @@ function Signup() {
     setSignupInfo({ ...signupInfo, [name]: value });
   };
 
-  // const handleSignup = (e) => {
-  //   e.preventDefault();
-
-  //   const { name, email, password } = signupInfo;
-
-  //   if (!name || !email || !password) {
-  //     return alert("All fields are required!");
-  //   }
-
-  //   localStorage.setItem("user", JSON.stringify(signupInfo));
-
-  //   alert("Signup successful!");
-  //   navigate("/login");
-  // };
-
-
-  const handleSignup = async (e) => {
+const handleSignup = async (e) => {
   e.preventDefault();
 
   const response = await fetch("http://localhost:5000/api/users/register", {

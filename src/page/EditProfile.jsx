@@ -21,7 +21,7 @@ export default function EditProfile({ user = {}, onSave }) {
         location: user.location || "",
         role: user.role || "",
         bio: user.bio || "",
-        photo: user.photo || "https://atd-bloges.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/04/16142845/anime-cool-profile-pictures-21-780x1024.webp"
+        photo: user.photo || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4DQ-tp12zlDGEUfulC2NNYwJ7vvskGXip6w&s"
       });
     }
   }, [user]);

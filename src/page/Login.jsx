@@ -17,38 +17,18 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-  
+
     const { email, password } = loginInfo;
-  
+
     if (!email || !password) {
       return alert("Email and password are required");
     }
-  
-    try {
-      const response = await fetch("http://localhost:5000/api/users/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
-  
-      const data = await response.json();
-  
-      if (data.error) {
-        return alert(data.error);
-      }
-  
-      // Save token + user
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user", JSON.stringify(data.user));
-  
-      alert("Login successful!");
-      navigate("/");
-  
-    } catch (error) {
-      alert("Login failed");
-    }
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", password);
+
+    alert("Login successful!");
+    navigate("/");
   };
-  
 
   return (
     <div className="container">

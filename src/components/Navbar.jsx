@@ -19,7 +19,7 @@ export default function Navbar() {
 
       <div className="nav-right">
         <button className="btn btn-green" onClick={onAddClick}>Add Idea</button>
-        <NavLink to="/login" className="btn btn-outline">Login</NavLink>
+        <NavLink to="/login" className="btn btn-outline" style={{fontSize:"20px"}}>Login</NavLink>
       </div>
     </nav>
   );

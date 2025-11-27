@@ -33,7 +33,7 @@ export default function Footer() {
           target="_blank" 
           rel="noopener noreferrer"
         >
-      <i class="fa-brands fa-linkedin-in"></i>     
+      <i className="fa-brands fa-linkedin-in"></i>     
      </a>
           <a 
           href="https://www.facebook.com/"   

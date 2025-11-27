@@ -18,7 +18,7 @@ export default function Dashboard({ ideas = [], onDelete, onLike, onComment, use
         {visible.length === 0 && <div className="muted">No ideas yet — add one!</div>}
         {visible.map(i => (
           <IdeaCard
-            key={i.id}
+            key={i._id}
             idea={i}
             onDelete={onDelete}
             onLike={onLike}
@@ -32,7 +32,7 @@ export default function Dashboard({ ideas = [], onDelete, onLike, onComment, use
         <div className="muted">Top ideas by likes</div>
         <ul style={{marginTop:12}}>
           {ideas.slice().sort((a,b)=>b.likes-a.likes).slice(0,5).map(i=>(
-            <li key={i.id} style={{padding:"8px 0"}}>{i.title} <span className="muted">({i.likes})</span></li>
+            <li key={i._id} style={{padding:"8px 0"}}>{i.title} <span className="muted">({i.likes})</span></li>
           ))}
         </ul>
       </aside>

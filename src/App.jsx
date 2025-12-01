@@ -21,7 +21,7 @@ export default function App() {
   const [ideas, setIdeas] = useState([]);
 
   async function loadIdeas() {
-    const res = await fetch("http://localhost:5000/api/ideas");
+    const res = await fetch("https://idea-share-backend.vercel.app/api/ideas");
     const data = await res.json();
     setIdeas(data);
   }
@@ -32,13 +32,13 @@ export default function App() {
 
   async function handleSubmit(idea) {
     if (idea.id) {
-      await fetch(`http://localhost:5000/api/ideas/${idea.id}`, {
+      await fetch(`https://idea-share-backend.vercel.app/api/ideas/${idea.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(idea),
       });
     } else {
-      await fetch("http://localhost:5000/api/ideas", {
+      await fetch("https://idea-share-backend.vercel.app/api/ideas", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(idea),
@@ -50,7 +50,7 @@ export default function App() {
   }
 
   async function handleDelete(id) {
-    await fetch(`http://localhost:5000/api/ideas/${id}`, {
+    await fetch(`https://idea-share-backend.vercel.app/api/ideas/${id}`, {
       method: "DELETE",
     });
 
@@ -58,7 +58,7 @@ export default function App() {
   }
 
   async function handleLike(id) {
-    await fetch(`http://localhost:5000/api/ideas/${id}/like`, {
+    await fetch(`https://idea-share-backend.vercel.app/api/ideas/${id}/like`, {
       method: "POST",
       headers: { "Content-Type": "application/json" }
     });
@@ -67,7 +67,7 @@ export default function App() {
   }
 
   async function handleComment(id, msg) {
-    await fetch(`http://localhost:5000/api/ideas/${id}/comment`, {
+    await fetch(`https://idea-share-backend.vercel.app/api/ideas/${id}/comment`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: msg }),

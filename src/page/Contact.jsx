@@ -10,8 +10,8 @@ export default function Contact() {
       <p>If you have any questions or suggestions, feel free to reach out!</p>
 
       <div className="contact-card">
-        <p><strong>Email:</strong> support@gmail.com</p>
-        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> laxmi23@navgurukul.org</p>
+        <p><strong>Phone:</strong> +91 9340365834</p>
         <p><strong>Address:</strong> Jashpur Campus, India</p>
       </div>
 

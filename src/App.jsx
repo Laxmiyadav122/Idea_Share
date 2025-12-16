@@ -31,8 +31,8 @@ export default function App() {
   }, []);
 
   async function handleSubmit(idea) {
-    if (idea.id) {
-      await fetch(`https://idea-share-backend.vercel.app/api/ideas/${idea.id}`, {
+    if (idea._id) {
+      await fetch(`https://idea-share-backend.vercel.app/api/ideas/${idea._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(idea),

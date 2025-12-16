@@ -1,0 +1,62 @@
+.addedit-wrapper {
+    max-width: 720px;
+    margin: 32px auto;
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.12);
+    transition: 0.3s ease;
+  }
+  
+  .addedit-wrapper:hover {
+    box-shadow: 0 12px 32px rgba(16, 24, 40, 0.18);
+  }
+  
+  .addedit-wrapper h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  
+  .addedit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .addedit-form input,
+  .addedit-form textarea {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    background: #f9fafb;
+    transition: 0.2s;
+  }
+  
+  .addedit-form input:focus,
+  .addedit-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  }
+  
+  .submit-btn {
+    background: var(--green);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background: #0f8a3a;
+    transform: translateY(-2px);
+  }
+  
